@@ -15,6 +15,10 @@
   --font-action: "Mulish", sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .hamburguer {
   width: 2rem;
   height: 2rem;
@@ -124,7 +128,7 @@ header {
   color: #fff;
   font-size: 3.5rem;
   font-family: var(--font-primary);
-  font-weight: 400;
+  font-weight: lighter;
   text-shadow: 0.2rem 0.3rem 2px rgba(0, 0, 0, 0.4);
   line-height: 3.5rem;
   margin-bottom: 1.5rem;
@@ -183,6 +187,7 @@ header {
   top: 0;
   right: -20rem;
   transition: all 0.7s;
+  z-index: 1; /* serve para colocar o menu lateral por cima de todo o conteudo da pagina*/
 }
 
 .show-menu .sidebar {
@@ -588,4 +593,60 @@ header {
 .btn-orcamento{
   padding: 1rem;
   grid-column: 2;
+}
+
+footer{
+  width: 100%;
+  height: 6rem;
+  background-color: #17181b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content p{
+  font-family: var(--font-secondary);
+  color: #a7a7a7;
+  font-size: 1.2rem;
+}
+
+.social-list a{
+  margin: 0 2rem;
+  color: #a7a7a7;
+  font-size: 1.3rem;
+}
+
+.social-list ul{
+  display: flex;
+}
+
+#link-topo{
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  width: 3rem;
+  height: 3rem;
+  background: #da22ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #9733ee,
+    #da22ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #9733ee,
+    #da22ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 .1rem .6rem #00000009;
 }
